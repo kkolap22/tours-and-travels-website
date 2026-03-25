@@ -1,17 +1,31 @@
 {
-  "name": "shreeja-tours-react",
+  "name": "shreeja-tours-travels",
   "version": "1.0.0",
+  "description": "Full-stack tours and travels booking platform",
   "private": true,
-  "dependencies": {
-    "express": "^5.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "^0.0.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "npm run frontend:start",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:start\"",
+    "build": "npm run frontend:build",
+    "backend:dev": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "frontend:start": "cd frontend && npm start",
+    "frontend:build": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "tours",
+    "travels",
+    "booking",
+    "react",
+    "node"
+  ],
+  "author": "",
+  "license": "MIT",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }

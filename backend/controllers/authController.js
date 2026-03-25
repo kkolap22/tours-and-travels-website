@@ -95,6 +95,7 @@ exports.login = async (req, res) => {
         name: user.name,
         email: user.email,
         isVerified: user.isVerified,
+        role: user.role,
       },
     });
   } catch (error) {
